@@ -1,24 +1,27 @@
-# FileRecovery
-A python script to recover various file types from a disk image using file signatures and only the Standard Library.
+# FileRecovery Tool
 
-## Supported File Types for Recovery
-The following file types are currently able to be recovered:
-* MPG
-* PDF
-* GIF
-* JPG
-* DOCX
-* AVI
-* PNG
+## Overview
+FileRecovery is a Python-based tool designed to recover specific file types from a disk image. It was developed using Python 3.8 and provides a straightforward way to extract and recover files such as MPG, PDF, GIF, JPG, DOCX, AVI, and PNG.
 
-## Usage
-FileRecovery requires Python 3.8 (developed using Python 3.8.6)
+## Features
+Supported File Types: MPG, PDF, GIF, JPG, DOCX, AVI, PNG
+Disk Image Input: Accepts disk images in `.dd` format
+Output:
+  - Recovered files stored in the working directory
+  - Generic file names
+  - Hexadecimal starting and ending offsets within the disk image
+  - SHA-256 hash for each recovered file
 
-FileRecovery accepts a disk image as an input and can be used as follows:\
-```./FileRecovery diskimage.dd``` or ```python3 FileRecovery.py diskimage.dd```
+## Requirements
+Python Version: Python 3.8 or higher
 
-FileRecovery outputs:
-* Recovered files (placed in the working direcory)
-* Generic file name
-* Hex starting and ending offset within the disk image
-* SHA-256 hash for each file
+## Output
+The tool will output the following for each recovered file:
+- **Recovered Files**: Files will be placed in the current working directory.
+- **Generic File Name**: Files will be named generically, based on their order of recovery.
+- **Hex Offsets**: The hexadecimal starting and ending offsets of each file within the disk image.
+- **SHA-256 Hash**: The SHA-256 hash value for each recovered file.
+
+
+
+After running the program, the recovered files will be stored in the working directory with their corresponding details.
